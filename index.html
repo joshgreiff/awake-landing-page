@@ -19,7 +19,8 @@
                         'primary-yellow': '#dffc01',
                         'secondary-blue': '#00c2cb',
                         'secondary-turqoise': '#2ed1a2',
-                        'secondary-limegreen': '#2ed1a2'
+                        'secondary-limegreen': '#2ed1a2',
+                        'bookmark-white': '#f7f7f7'
                     },
                     fontSize: {
                         mammoth: '8rem'
@@ -59,11 +60,11 @@
         src: url('./public/fonts/Poppins-Regular.ttf');
         }
        
-        h1 {
+        #title {
             font-family: mokoto-glitch-mark-2 
         }
 
-        h2, p, button{
+        h2, p, button, section{
             font-family: poppins
         }
     </style>
@@ -72,10 +73,10 @@
             @apply shadow-md py-3 px-6 rounded-md transition duration-500;
         }
         .btn-purple{
-            @apply bg-primary-purple text-white hover:shadow-inner hover:bg-white hover:text-black;
+            @apply bg-primary-purple text-white hover:shadow-inner hover:bg-bookmark-white hover:text-black;
         }
         .btn-white{
-            @apply bg-white;
+            @apply bg-bookmark-white;
         }
     </style>
 </head>
@@ -84,7 +85,7 @@
     <header>
         <nav class="container flex items-center py-4 mt-4 sm:mt-12">
             <div class="py-1 text-primary-blue font-bold">
-                <h1 class="text-5xl">AWAKE</h1>
+                <h1 id="title" class="text-5xl">AWAKE</h1>
             </div>
             <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-primary-blue uppercase text-m">
                 <li class="cursor-pointer">Features</li>
@@ -117,6 +118,57 @@
             <!-- Background Shape -->
             <div class="hidden lg:block overflow-hidden bg-primary-yellow rounded-l-full absolute h-80 w-2/4 top-40 right-0 lg:-bottom-28 lg:-right-26">
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-bookmark-white py-20 mt-20 lg:mt-60">
+        <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h2 class="text-3xl text-center text-primary-blue">Features</h2>
+            <p class="text-center text-gray-600 mt-4 font-bold">
+                <!-- Awake uses gamification to help you create your own reality from scratch. -->
+            </p>
+        </div>
+        <!-- Feature 1 -->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- Image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0-">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./public/img/9.svg" alt="">
+                </div>
+                <!-- Content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-primary-blue">A New Way Of Structuring Goals</h1>
+                    <p class="text-gray-700 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Awake uses gamification to make setting goals interactive and engaging. Complete quests, collect rewards and level up your character by completing tasks.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+            <!-- Image -->
+            <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0-">
+                <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./public/img/14.svg" alt="">
+            </div> 
+            <!-- Content -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+                <h1 class="text-3xl text-primary-blue">Revolutionary Support</h1>
+                <p class="text-gray-700 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Our responsive Mindset Robot uses positive psychology to reinforce helpful thoughts and assist you in identifying and eliminating limiting beliefs.</p>
+            </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- Image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0-">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./public/img/10.svg" alt="">
+                </div>
+                <!-- Content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-primary-blue">Grow Through Community</h1>
+                    <p class="text-gray-700 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Share progress with friends and build a support system. Awake is predicated on cultivating a sense of community. There is no better way to reach your goals than to surround yourself with people who are committed to building and growing.</p>
+                </div>
             </div>
         </div>
     </section>
